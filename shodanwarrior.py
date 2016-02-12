@@ -61,13 +61,6 @@ try:
     #print banners 
     print "Banner %s" % host["data"][0]["data"]
 
-    #METHOD 2 - declare varialbes and print here >>>
-    #print 'Domain: %s' + domainname
-    #print 'Country: ' + country
-    #print 'Last Update: ' + update
-    #print 'Coordinates: ' + coordinates
-    #print 'Country Code: ' + country_code3
-
     #pull the vulns element from host data array and return common vulns and exposures (CVE) numbers that shodan believes the server is potentially vulnerable too.
     item = host["vulns"][0]
     CVE = item.replace("!","")
