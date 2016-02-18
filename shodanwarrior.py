@@ -11,15 +11,16 @@ api = shodan.Shodan("2EunWh2yw16Z3ohUseDPVcdICIS5yHGa")
 #servicesi = api.services()
 
 #specify target for information gathering in raw_input field with our static variable
-print 65* '='
+print 79* '='
+
 target = raw_input('Enter Target IP/Domain: ')
-    
+
 #the variable dns res == resolve ip in target box and utilise shodan API to pull down information from shodans databases
 dnsRes = "https://api.shodan.io/dns/resolve?hostnames=" + target + "&key=" + "2EunWh2yw16Z3ohUseDPVcdICIS5yHGa"
 
 def menu():
     print t.clear()
-    print t.bold_red
+    print t.bold_green
     print """
       _               _                                           _            
      | |             | |                                         (_)           
@@ -28,10 +29,11 @@ def menu():
  \__ \ | | | (_) | (_| | (_| | | | |      \ V  V / (_| | |  | |  | | (_) | |   
  |___/_| |_|\___/ \__,_|\__,_|_| |_|       \_/\_/ \__,_|_|  |_|  |_|\___/|_| 
                                                                 
- ------------------------------------------------------ BPM 2015 - Release v1.0
-""" 
+ ---------------------------------------------------- BPM 2015 - Release v1.4.0
+"""
     print t.normal
 menu()
+
 
 #wrap in a try/except block to catch errors.
 try:
@@ -42,9 +44,6 @@ try:
     hostIP = resolved.json()[target]
     #lookup and print targethost information
     host = api.host(hostIP) #history=True #set second parameter to true for a history call banner history for the host.
-
-    #METHOD 1 print and point to data to retrieve 
-    #use shodans host function to conduct a lookup and list all below information about the host in the returned JSON.
 
     print 'Host IP: %s' % host['ip_str']
     print 'Domain: %s' % host['data'][0]['domains'][0]
@@ -73,4 +72,6 @@ try:
         print exploit.get("description")
 
 except Exception as e:
-        print "An error was found - " + str(e)
+        print 
+        print " ***AN ERROR HAS BEEN DETECTED*** - " + str(e)
+        print
