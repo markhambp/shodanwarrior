@@ -8,5 +8,10 @@ The tool utilises the Shodan API to pull back various site information including
 6.Last Updated
 7.Host Coordinates
 8.CVE's (BETA Phase)
+9.City
+10.Autonomous Number
+11.IP Address
+12.Operating System
+13.Organisation
 
 Shodan GUI: https://www.shodan.io/
