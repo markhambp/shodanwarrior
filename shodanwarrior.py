@@ -49,17 +49,20 @@ try:
     print 'Domain: %s' % host['data'][0]['domains'][0]
     print 'Organisation: %s' % host.get('org', 'n/a')
     print 'Operating System: %s' % host.get('os', 'n/a')
+    #print 'ASN No: %s' % host['asn']
+    print 'ISP: %s' % host['isp']
+    print 60* '-'
     print 'Country: %s' % str(host["data"][0]["location"]["country_name"])
     print 'Country Code: %s' % host["data"][0]["location"]["country_code3"]
-    print
+    print 'City: %s' % host['data'][0]['location']['city']
+    print 
     print 'Last Updated: %s' % host["last_update"]
     print 'Coordinates: %s' % str(host["data"][0]["location"]["latitude"]) + "," + str(host["data"][0]["location"]["longitude"])
-    print 'Open Ports: %s ' % host['ports']
-    print
+    print 'Open Ports: %s' % host['ports']
+    print 60* '-'
 
     #print banners 
-    print "Banner %s" % host["data"][0]["data"]
-
+    print "Banner: %s" % host["data"][0]["data"]
     #pull the vulns element from host data array and return common vulns and exposures (CVE) numbers that shodan believes the server is potentially vulnerable too.
     item = host["vulns"][0]
     CVE = item.replace("!","")
