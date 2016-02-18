@@ -18,12 +18,12 @@ Shodan GUI: https://www.shodan.io/
 
 Troubleshooting - if experiencing the below error when trying to run the script try the following in terminal:
 
----
+
 Traceback (most recent call last):
 File "shodanwarrior.py", line 2, in <module>
 import shodan
-ImportError: No module named shodan
----
+ImportError: no module named shodan
+
 
 Solution:
 
