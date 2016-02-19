@@ -14,8 +14,6 @@ The tool utilises the Shodan API to pull back various site information including
 	12.Operating System  
 	13.Organisation  
 
-Shodan GUI: https://www.shodan.io/  
-
 Troubleshooting - if experiencing the below error when trying to run the script try the following in terminal:  
 
 
@@ -27,6 +25,13 @@ ImportError: no module named shodan
 
 ##Solution:  
 
-	1. pip install shodan  
+	1. pip install shodan
 	2. pip install blessings  
-	2. ./shodanwarrior.py or python shodanwarrior.py  
+	3. ./shodanwarrior.py or python shodanwarrior.py
+
+if above fails try:
+
+    1. easy_install shodan
+    2. ./shodanwarrior.py or python shodanwarrior.py
+
+Shodan GUI: https://www.shodan.io/  
