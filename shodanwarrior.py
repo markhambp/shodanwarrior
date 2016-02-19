@@ -9,30 +9,28 @@ width = t.width
 #create and intilaise API object so that you can connect to shodan API
 api = shodan.Shodan("2EunWh2yw16Z3ohUseDPVcdICIS5yHGa")
 #servicesi = api.services()
-
-#specify target for information gathering in raw_input field with our static variable
-print 79* '='
-
-target = raw_input('Enter Target IP/Domain: ')
-
-#the variable dns res == resolve ip in target box and utilise shodan API to pull down information from shodans databases
-dnsRes = "https://api.shodan.io/dns/resolve?hostnames=" + target + "&key=" + "2EunWh2yw16Z3ohUseDPVcdICIS5yHGa"
-
 def menu():
     print t.clear()
-    print t.bold_green
-    print """
+    print t.bold_green + """
       _               _                                           _            
      | |             | |                                         (_)           
   ___| |__   ___   __| | __ _ _ __ ________      ____ _ _ __ _ __ _  ___  _ __ 
  / __| '_ \ / _ \ / _` |/ _` | '_ \______\ \ /\ / / _` | '__| '__| |/ _ \| '__|
  \__ \ | | | (_) | (_| | (_| | | | |      \ V  V / (_| | |  | |  | | (_) | |   
- |___/_| |_|\___/ \__,_|\__,_|_| |_|       \_/\_/ \__,_|_|  |_|  |_|\___/|_| 
-                                                                
- ---------------------------------------------------- BPM 2015 - Release v1.4.0
-"""
-    print t.normal
+ |___/_| |_|\___/ \__,_|\__,_|_| |_|       \_/\_/ \__,_|_|  |_|  |_|\___/|_|"""
+    print t.bold_green + "\n ---------------------------------------------------- " + t.normal + "BPM 2015 - Release v1.4.0"
+
 menu()
+#specify target for information gathering in raw_input field with our static variable
+print
+print (' USAGE EXAMPLE: testsitedomain.com or X.X.X.X')
+print
+target = raw_input(' Enter Target Domain/IP: ')
+print
+#the variable dns res == resolve ip in target box and utilise shodan API to pull down information from shodans databases
+dnsRes = "https://api.shodan.io/dns/resolve?hostnames=" + target + "&key=" + "2EunWh2yw16Z3ohUseDPVcdICIS5yHGa"
+
+
 
 
 #wrap in a try/except block to catch errors.
