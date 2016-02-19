@@ -1,4 +1,4 @@
-# shodanwarrior  
+##ShodanWarrior  
 The tool utilises the Shodan API to pull back various site information including the following:  
 
 	1.HTTP Banner  
@@ -25,7 +25,7 @@ import shodan
 ImportError: no module named shodan  
 
 
-Solution:  
+#Solution:  
 
 	1. pip install shodan  
 	2. pip install blessings  
