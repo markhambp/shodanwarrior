@@ -18,7 +18,7 @@ def menu():
  / __| '_ \ / _ \ / _` |/ _` | '_ \______\ \ /\ / / _` | '__| '__| |/ _ \| '__|
  \__ \ | | | (_) | (_| | (_| | | | |      \ V  V / (_| | |  | |  | | (_) | |   
  |___/_| |_|\___/ \__,_|\__,_|_| |_|       \_/\_/ \__,_|_|  |_|  |_|\___/|_|"""
-    print t.bold_green + "\n ---------------------------------------------------- " + t.normal + "BPM 2015 - Release v1.4.0"
+    print t.bold_green + "\n ---------------------------------------------------- " + t.normal + "BPM 2015 - Release v1.4.2"
 
 menu()
 #specify target for information gathering in raw_input field with our static variable
